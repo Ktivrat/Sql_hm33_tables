@@ -63,6 +63,34 @@ CREATE TABLE IF NOT EXISTS Halls (
 SELECT * FROM Movies;
 
 
+/* -- Таблица "Фильмы" (Movies)
+CREATE TABLE IF NOT EXISTS Movies (
+    movie_id INT PRIMARY KEY,
+    title VARCHAR(100) NOT NULL,
+    genre VARCHAR(50),
+    release_date DATE
+);
+
+-- Таблица "Залы" (Halls)
+CREATE TABLE IF NOT EXISTS Halls (
+    hall_id INT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    capacity INT
+);
+
+-- Таблица "Сеансы" (Sessions)
+CREATE TABLE IF NOT EXISTS Sessions (
+    session_id INT PRIMARY KEY,
+    movie_id INT,
+    hall_id INT,
+    start_time DATETIME,
+    FOREIGN KEY (movie_id) REFERENCES Movies(movie_id),
+    FOREIGN KEY (hall_id) REFERENCES Halls(hall_id)
+); */
+
+
+
+
 -- Таблица "Огород"
 CREATE TABLE IF NOT EXISTS Garden (
     garden_id INT AUTO_INCREMENT PRIMARY KEY,
